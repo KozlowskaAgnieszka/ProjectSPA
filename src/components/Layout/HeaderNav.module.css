@@ -10,7 +10,6 @@
   /* justify-content: space-around;
   align-items: center; */
   margin-right: 10px;
-  padding: 0 0.75rem;
   text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.7);
 }
 
@@ -19,4 +18,10 @@
 .button:hover {
   background: rgba(163, 163, 163, 0.2);
   box-shadow: 0 0 8px rgba(163, 163, 163, 0.7);
+}
+
+.icon {
+  filter: invert(100%) sepia(1%) saturate(32%) hue-rotate(288deg)
+    brightness(110%) contrast(98%) drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.7));
+  margin: 0.3rem;
 }

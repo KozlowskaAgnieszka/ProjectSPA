@@ -1,13 +1,16 @@
-import HeaderLink from './HeaderLink';
+import HeaderNav from './HeaderNav';
 
 import classes from './Header.module.css';
-import heroImage from '../../assets/heroImage.jpg';
+import home from '../../assets/home.svg';
 
 const Header = (props) => {
   return (
     <header className={classes.header}>
-      <HeaderLink>Rooms</HeaderLink>
-      <HeaderLink>Treatments</HeaderLink>
+      <HeaderNav type="icon">
+        <img src={home} alt="Home icon" />
+      </HeaderNav>
+      <HeaderNav>Rooms</HeaderNav>
+      <HeaderNav>Treatments</HeaderNav>
     </header>
   );
 };
