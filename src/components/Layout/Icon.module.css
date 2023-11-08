@@ -1,16 +1,12 @@
 .icon {
-  filter: invert(100%) sepia(1%) saturate(32%) hue-rotate(288deg)
-    brightness(110%) contrast(98%) drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.7));
+  filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.7));
   margin: 0.3rem;
   padding: 0.2rem;
-  width: 3rem;
-  height: 3rem;
 }
 
 .icon:active,
 .icon:focus,
 .icon:hover {
-  filter: invert(100%) sepia(1%) saturate(32%) hue-rotate(288deg)
-    brightness(110%) contrast(98%) drop-shadow(0 0 8px rgba(163, 163, 163, 0.9));
+  filter: drop-shadow(0 0 8px rgba(163, 163, 163, 0.9));
   cursor: pointer;
 }
