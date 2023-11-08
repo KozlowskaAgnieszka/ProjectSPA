@@ -1,6 +1,6 @@
-import classes from './HeaderNav.module.css';
+import classes from './HeaderLink.module.css';
 
-const HeaderNav = (props) => {
+const HeaderLink = (props) => {
   return (
     <button className={classes.button} onClick={props.onClick}>
         <span className={classes[props.type]}>{props.children}</span> 
@@ -8,4 +8,4 @@ const HeaderNav = (props) => {
   );
 };
 
-export default HeaderNav;
+export default HeaderLink;

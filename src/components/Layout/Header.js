@@ -1,16 +1,21 @@
-import HeaderNav from './HeaderNav';
+import HeaderLink from './HeaderLink';
+import Icon from './Icon';
+import CartIcon from '../Cart/CartIcon';
 
 import classes from './Header.module.css';
-import home from '../../assets/home.svg';
+import HomeIconImage from '../../assets/icons/home.svg';
 
 const Header = (props) => {
   return (
     <header className={classes.header}>
-      <HeaderNav type="icon">
-        <img src={home} alt="Home icon" />
-      </HeaderNav>
-      <HeaderNav>Rooms</HeaderNav>
-      <HeaderNav>Treatments</HeaderNav>
+      <span className={classes.nav}>
+        <Icon src={HomeIconImage} alt="Home icon"/>
+        <HeaderLink>Rooms</HeaderLink>
+        <HeaderLink>Treatments</HeaderLink>
+      </span>
+      <span className={classes.nav}>
+        <CartIcon/>
+      </span>
     </header>
   );
 };
