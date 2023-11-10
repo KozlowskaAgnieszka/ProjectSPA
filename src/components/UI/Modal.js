@@ -9,12 +9,24 @@ const Backdrop = (props) => {
   return <div className={classes.backdrop} onClick={props.onClose}></div>;
 };
 
-const Module = (props) => {
+const ModalOverlay = (props) => {
+  return (
+    <div className={classes.modal}>
+      <div>{props.children}</div>
+    </div>
+  );
+};
+
+const Modal = (props) => {
   return (
     <Fragment>
       {createPortal(<Backdrop onClose={props.onClose} />, portalOverlay)}
+      {createPortal(
+        <ModalOverlay>{props.children}</ModalOverlay>,
+        portalOverlay
+      )}
     </Fragment>
   );
 };
 
-export default Module;
+export default Modal;
