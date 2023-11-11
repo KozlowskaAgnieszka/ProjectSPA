@@ -1,20 +1,24 @@
 import HeaderLink from './HeaderLink';
-import Icon from './Icon';
-import CartButton from './CartButton';
+import HeaderIcon from './HeaderIcon';
+import HeaderLogo from './HeaderLogo';
+import HeaderCartButton from './HeaderCartButton';
 
 import classes from './Header.module.css';
-import HomeIconImage from '../../assets/icons/home.svg';
+import HomeIconImage from '../../../assets/icons/home.svg';
 
 const Header = (props) => {
   return (
     <header className={classes.header}>
       <span className={classes.nav}>
-        <Icon src={HomeIconImage} alt="Home icon" />
+        <HeaderIcon src={HomeIconImage} alt="Home icon" />
         <HeaderLink>Rooms</HeaderLink>
         <HeaderLink>Treatments</HeaderLink>
       </span>
+      <span className={classes.logo}>
+        <HeaderLogo />
+      </span>
       <span className={classes.nav}>
-        <CartButton onClick={props.onShowCart} />
+        <HeaderCartButton onClick={props.onShowCart} />
       </span>
     </header>
   );

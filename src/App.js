@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import Header from './components/Layout/Header';
+import Header from './components/Layout/Header/Header';
 import Cart from './components/Cart/Cart';
 
 function App() {
