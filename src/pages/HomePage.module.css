@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative');
+
+body {
+  margin: 0;
+  background-image: url('../assets/heroImage.jpg');
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.logo {
+  text-align: center;
+  padding-top: 15vh;
+}
+
+.lotus {
+  height: 13rem;
+  width: 13rem;
+  filter: 4px 4px 4px rgba(0, 0, 0, 0.7);
+}
+
+.logo-title {
+  color: white;
+  font-family: 'Cinzel Decorative', cursive;
+  font-weight: bold;
+  font-size: 4rem;
+  text-transform: uppercase;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.7);
+}
+
+.booking {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}

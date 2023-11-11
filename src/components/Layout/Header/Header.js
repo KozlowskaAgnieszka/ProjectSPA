@@ -1,3 +1,5 @@
+import { NavLink } from 'react-router-dom';
+
 import HeaderLink from './HeaderLink';
 import HeaderIcon from './HeaderIcon';
 import HeaderLogo from './HeaderLogo';
@@ -10,12 +12,16 @@ const Header = (props) => {
   return (
     <header className={classes.header}>
       <span className={classes.nav}>
-        <HeaderIcon src={HomeIconImage} alt="Home icon" />
+        <NavLink to="/">
+          <HeaderIcon src={HomeIconImage} alt="Home icon" />
+        </NavLink>
         <HeaderLink>Rooms</HeaderLink>
         <HeaderLink>Treatments</HeaderLink>
       </span>
       <span className={classes.logo}>
-        <HeaderLogo />
+        <NavLink to="/">
+          <HeaderLogo />
+        </NavLink>
       </span>
       <span className={classes.nav}>
         <HeaderCartButton onClick={props.onShowCart} />
