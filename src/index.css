@@ -8,10 +8,4 @@ html {
   font-family: 'Poppins', 'Arial', sans-serif;
 }
 
-body {
-  margin: 0;
-  background-image: url('./assets/heroImage.jpg');
-  background-position: center;
-  background-size: cover;
-  height: 100vh;
-}
+
