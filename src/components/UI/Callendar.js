@@ -26,12 +26,13 @@ const Callendar = (props) => {
       maxDate={addDays(new Date(), 365)}
       className={classes['callendar-input']}
       calendarClassName={classes.callendar}
-      dayClassName={(date) => (new Date() < date ? classes.day : undefined)}
+      dayClassName={(date) => (new Date() < date ? classes.day : classes['days-disabled'])}
       popperPlacement="top"
       monthsShown={2}
       withPortal
       fixedHeight
       placeholderText="Choose your dates..."
+      calendarStartDay={1}
     />
   );
 };
