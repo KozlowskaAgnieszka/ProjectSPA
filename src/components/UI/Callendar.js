@@ -32,8 +32,6 @@ const Callendar = (props) => {
       withPortal
       fixedHeight
       placeholderText="Choose your dates..."
-      excludeDates={[addDays(new Date(), 1), addDays(new Date(), 5)]}
-      selectsDisabledDaysInRange
     />
   );
 };
