@@ -1,6 +1,7 @@
 import Logo from '../assets/lotus.png';
 
 import Button from '../components/UI/Button';
+import Callendar from '../components/UI/Callendar';
 
 import classes from './HomePage.module.css';
 
@@ -16,9 +17,9 @@ const HomePage = (props) => {
         </h1>
       </section>
       <section className={classes.booking}>
-        <div>Callendar</div>
-        <Button style="green">Book online</Button>
-        <Button style="grey">Log in</Button>
+        <Callendar/>
+        <Button btnStyle="green">Book online</Button>
+        <Button btnStyle="grey">Log in</Button>
       </section>
     </>
   );
