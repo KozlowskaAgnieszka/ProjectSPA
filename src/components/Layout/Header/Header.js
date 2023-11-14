@@ -15,7 +15,9 @@ const Header = (props) => {
         <NavLink to="/">
           <HeaderIcon src={HomeIconImage} alt="Home icon" />
         </NavLink>
-        <HeaderLink>Rooms</HeaderLink>
+        <NavLink to="/rooms">
+          <HeaderLink>Rooms</HeaderLink>
+        </NavLink>
         <HeaderLink>Treatments</HeaderLink>
       </span>
       <span className={classes.logo}>

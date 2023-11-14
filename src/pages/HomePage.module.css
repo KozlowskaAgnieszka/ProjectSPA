@@ -1,13 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative');
 
-body {
-  margin: 0;
-  background-image: url('../assets/heroImage.jpg');
-  background-position: center;
-  background-size: cover;
-  height: 100vh;
-}
-
 .logo {
   text-align: center;
   padding-top: 15vh;
