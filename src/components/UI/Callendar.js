@@ -14,7 +14,9 @@ const Callendar = (props) => {
     setEndDate(end);
   };
 
+  const callendarStyle = `${classes['callendar-input']} ${classes[props.calStyle]}`
   return (
+
     <DatePicker
       dateFormat="dd MMM yy"
       selected={startDate}
@@ -24,7 +26,7 @@ const Callendar = (props) => {
       selectsRange
       minDate={new Date()}
       maxDate={addDays(new Date(), 365)}
-      className={classes['callendar-input']}
+      className={callendarStyle}
       calendarClassName={classes.callendar}
       dayClassName={(date) => (new Date() < date ? classes.day : classes['days-disabled'])}
       popperPlacement="top"

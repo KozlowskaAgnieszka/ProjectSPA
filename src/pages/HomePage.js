@@ -8,6 +8,7 @@ import Logo from '../assets/lotus.png';
 import classes from './HomePage.module.css';
 
 const HomePage = (props) => {
+ 
   return (
     <>
       <section className={classes.logo}>

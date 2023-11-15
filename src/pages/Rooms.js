@@ -5,15 +5,15 @@ import classes from './Rooms.module.css';
 
 const Rooms = (props) => {
   return (
-    <>
+    <section className={classes['main-section']}>
       <h1>Rooms</h1>
-      <Callendar />
+      <div className={classes.stay}>Your stay: <Callendar calStyle="light"/></div>
       <ul className={classes['rooms-list']}>
         <RoomCard />
         <RoomCard />
         <RoomCard />
       </ul>
-    </>
+    </ section>
   );
 };
 

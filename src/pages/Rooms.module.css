@@ -1,3 +1,19 @@
+.main-section {
+  background-color: white;
+  margin-top: 4.6rem;
+  height: 100vh;
+}
+
+.stay {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  text-transform: uppercase;
+  margin: 1rem auto;
+  padding: 0.2rem;
+  font-size: 1.1rem;
+}
+
 .rooms-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

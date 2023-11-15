@@ -13,6 +13,15 @@
   color: white;
 }
 
+.light {
+  color: #202020;
+  background-color: #e7e7e7cc;
+  padding: 0.2rem;
+  margin: 1rem;
+  font-size: 1.1rem;
+  box-shadow: 1px 1px 4px #00000080;
+}
+
 .callendar {
   background-color: rgba(50, 50, 50, 0.75);
   font-family: 'Poppins', 'Arial', sans-serif;
@@ -24,5 +33,5 @@
 }
 
 .days-disabled {
- color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.2);
 }
