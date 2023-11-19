@@ -1,12 +1,12 @@
-.cart-icon {
+.icon {
     filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.7));
     margin: 0.3rem;
     padding: 0.2rem;
   }
   
-  .cart-icon:active,
-  .cart-icon:focus,
-  .cart-icon:hover {
+  .icon:active,
+  .icon:focus,
+  .icon:hover {
     filter: drop-shadow(0 0 8px rgba(163, 163, 163, 0.9));
     cursor: pointer;
   }

@@ -4,6 +4,7 @@ import Callendar from '../components/UI/Callendar';
 import classes from './Rooms.module.css';
 
 const Rooms = (props) => {
+
   return (
     <section className={classes['main-section']}>
       <h1>Rooms</h1>

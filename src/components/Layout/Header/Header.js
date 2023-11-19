@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 
 import HeaderLink from './HeaderLink';
-import HeaderIcon from './HeaderIcon';
+import Icon from '../../UI/Icon';
 import HeaderLogo from './HeaderLogo';
 import HeaderCartButton from './HeaderCartButton';
 
@@ -13,7 +13,7 @@ const Header = (props) => {
     <header className={classes.header}>
       <span className={classes.nav}>
         <NavLink to="/">
-          <HeaderIcon src={HomeIconImage} alt="Home icon" />
+          <Icon image={HomeIconImage} alt="Home icon" />
         </NavLink>
         <NavLink to="/rooms">
           <HeaderLink>Rooms</HeaderLink>

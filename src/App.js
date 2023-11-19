@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { useContext } from 'react';
 
 import Layout from './components/Layout/Layout';
 import HomePage from './pages/HomePage';

@@ -1,0 +1,23 @@
+.room-item {
+  border-top: 1px solid white;
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.room-item:last-of-type {
+  border-bottom: 1px solid white;
+}
+
+.room-details {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 4fr 2fr 2fr;
+  margin: 0 auto;
+  font-size: 1.125rem;
+  letter-spacing: 0.02em;
+  align-self: center;
+  padding: 0.75rem;
+}

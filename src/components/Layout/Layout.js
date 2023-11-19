@@ -6,7 +6,6 @@ import Cart from '../Cart/Cart';
 import classes from './Layout.module.css'
 
 const Layout = (props) => {
-  console.log(props.children)
   const [cartIsShown, setCartIsShown] = useState(false);
 
   const showCartHandler = () => {
