@@ -1,6 +1,24 @@
+.stay {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  text-transform: uppercase;
+  margin: 1rem auto;
+  padding: 0.2rem;
+  font-size: 1.1rem;
+}
+
 .room-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 0 auto;
+}
+
+.placeholder {
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 1rem auto;
+  color: rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }

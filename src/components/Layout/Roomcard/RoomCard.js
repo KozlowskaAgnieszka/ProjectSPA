@@ -11,11 +11,10 @@ const RoomCard = () => {
   const addToCartHandler = () => {
     dispatch(
       cartActions.addItem({
-        id: '123',
+        id: Math.random(),
         name: 'Room name',
         amount: 1,
         price: 150,
-        days: 1,
       })
     );
   };

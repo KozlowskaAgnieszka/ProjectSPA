@@ -21,3 +21,9 @@
   align-self: center;
   padding: 0.75rem;
 }
+
+.button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
