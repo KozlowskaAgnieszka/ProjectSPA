@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { cartActions } from '../../store/index';
 import { useDispatch, useSelector } from 'react-redux';
 import DatePicker from 'react-datepicker';
@@ -11,8 +10,6 @@ const Callendar = (props) => {
   const dispatch = useDispatch();
   const days = useSelector((state) => state.cart.days);
 
-  // const [startDate, setStartDate] = useState(null);
-  // const [endDate, setEndDate] = useState(null);
 
   const onChange = (dates) => {
     const [start, end] = dates;
