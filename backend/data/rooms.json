@@ -1,0 +1,74 @@
+[
+  {
+    "id": "r1",
+    "name": "Deluxe single room with sea view",
+    "beds": 1,
+    "guests": 1,
+    "price": 170,
+    "image": {
+      "src": "room-1.jpg",
+      "alt": "Deluxe single room with sea view"
+    },
+    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+  },
+  {
+    "id": "r2",
+    "name": "Mountain-view room with balcony",
+    "beds": 1,
+    "guests": 2,
+    "price": 240,
+    "image": {
+      "src": "room-2.jpg",
+      "alt": "Mountain-view room with balcony"
+    },
+    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+  },
+  {
+    "id": "r3",
+    "name": "Superior room with mountain view",
+    "beds": 2,
+    "guests": 3,
+    "price": 290,
+    "image": {
+      "src": "room-3.jpg",
+      "alt": "Superior room with mountain view"
+    },
+    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+  },
+  {
+    "id": "r4",
+    "name": "Monastery view king bed",
+    "beds": 1,
+    "guests": 2,
+    "price": 340,
+    "image": {
+      "src": "room-4.jpg",
+      "alt": "Monastery view king bed"
+    },
+    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+  },
+  {
+    "id": "r5",
+    "name": "Apartment with astonishing view",
+    "beds": 3,
+    "guests": 4,
+    "price": 450,
+    "image": {
+      "src": "room-5.jpg",
+      "alt": "Apartment with astonishing view"
+    },
+    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+  },
+  {
+    "id": "r6",
+    "name": "Premium sea view room",
+    "beds": 3,
+    "guests": 5,
+    "price": 280,
+    "image": {
+      "src": "room-6.jpg",
+      "alt": "Premium sea view room"
+    },
+    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+  }
+]
