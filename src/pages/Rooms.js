@@ -3,7 +3,7 @@ import Callendar from '../components/UI/Callendar';
 
 import classes from './Rooms.module.css';
 
-const Rooms = (props) => {
+const Rooms = () => {
 
   return (
     <section className={classes['main-section']}>

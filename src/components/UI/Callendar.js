@@ -6,10 +6,9 @@ import { addDays } from 'date-fns';
 import 'react-datepicker/dist/react-datepicker.css';
 import classes from './Callendar.module.css';
 
-const Callendar = (props) => {
+const Callendar = ({ calStyle }) => {
   const dispatch = useDispatch();
   const days = useSelector((state) => state.cart.days);
-
 
   const onChange = (dates) => {
     const [start, end] = dates;
@@ -26,9 +25,7 @@ const Callendar = (props) => {
     );
   };
 
-  const callendarStyle = `${classes['callendar-input']} ${
-    classes[props.calStyle]
-  }`;
+  const callendarStyle = `${classes['callendar-input']} ${classes[calStyle]}`;
 
   return (
     <DatePicker

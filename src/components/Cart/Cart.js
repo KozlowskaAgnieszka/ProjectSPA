@@ -5,7 +5,6 @@ import classes from './Cart.module.css';
 import Modal from '../UI/Modal';
 import CartRoomItem from './CartRoomItem';
 import Callendar from '../UI/Callendar';
-import { Link } from 'react-router-dom';
 
 const Cart = (props) => {
   const dispatch = useDispatch();
@@ -33,7 +32,7 @@ const Cart = (props) => {
   );
 
   return (
-    <Modal onClose={props.onClose}>
+    <Modal >
       <h1>Cart</h1>
       <div className={classes.stay}>
         Your stay: <Callendar calStyle="light" />

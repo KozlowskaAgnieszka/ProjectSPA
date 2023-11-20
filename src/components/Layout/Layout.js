@@ -1,26 +1,18 @@
-import { useState } from 'react';
+import { useSelector } from 'react-redux';
 
 import Header from './Header/Header';
 import Cart from '../Cart/Cart';
 
-import classes from './Layout.module.css'
+import classes from './Layout.module.css';
 
-const Layout = (props) => {
-  const [cartIsShown, setCartIsShown] = useState(false);
-
-  const showCartHandler = () => {
-    setCartIsShown(true);
-  };
-
-  const hideCartHandler = () => {
-    setCartIsShown(false);
-  };
+const Layout = ({ background, children }) => {
+  const cartIsShown = useSelector((state) => state.cart.cartIsShown);
 
   return (
     <>
-      {cartIsShown && <Cart onClose={hideCartHandler} />}
-      <Header onShowCart={showCartHandler} />
-      <main className={classes[props.background]}>{props.children}</main>
+      {cartIsShown && <Cart />}
+      <Header />
+      <main className={classes[background]}>{children}</main>
     </>
   );
 };

@@ -4,11 +4,9 @@ import Button from '../components/UI/Button';
 import Callendar from '../components/UI/Callendar';
 
 import Logo from '../assets/lotus.png';
-
 import classes from './HomePage.module.css';
 
-const HomePage = (props) => {
- 
+const HomePage = () => {
   return (
     <>
       <section className={classes.logo}>

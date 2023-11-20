@@ -8,7 +8,7 @@ import HeaderCartButton from './HeaderCartButton';
 import classes from './Header.module.css';
 import HomeIconImage from '../../../assets/icons/home.svg';
 
-const Header = (props) => {
+const Header = () => {
   return (
     <header className={classes.header}>
       <span className={classes.nav}>
@@ -26,7 +26,7 @@ const Header = (props) => {
         </NavLink>
       </span>
       <span className={classes.nav}>
-        <HeaderCartButton onClick={props.onShowCart} />
+        <HeaderCartButton />
       </span>
     </header>
   );

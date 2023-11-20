@@ -1,6 +1,7 @@
 import { createSlice, configureStore } from '@reduxjs/toolkit';
 
 const initialState = {
+  cartIsShown: false,
   items: [],
   totalAmount: 0,
   days: { start: null, end: null, days: 0 },
@@ -10,6 +11,9 @@ const cartSlice = createSlice({
   name: 'cart',
   initialState: initialState,
   reducers: {
+    showCart(state, action) {
+      state.cartIsShown = action.payload;
+    },
     getDate(state, action) {
       state.days = action.payload;
     },

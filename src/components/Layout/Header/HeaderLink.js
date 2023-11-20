@@ -1,9 +1,9 @@
 import classes from './HeaderLink.module.css';
 
-const HeaderLink = (props) => {
+const HeaderLink = ({ onClick, type, children }) => {
   return (
-    <button className={classes.button} onClick={props.onClick}>
-        <span className={classes[props.type]}>{props.children}</span> 
+    <button className={classes.button} onClick={onClick}>
+      <span className={classes[type]}>{children}</span>
     </button>
   );
 };

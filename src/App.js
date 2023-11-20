@@ -1,11 +1,10 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { useContext } from 'react';
 
 import Layout from './components/Layout/Layout';
 import HomePage from './pages/HomePage';
 import Rooms from './pages/Rooms';
 
-function App(props) {
+function App() {
   return (
     <BrowserRouter>
       <Layout background={'background-image'}>

@@ -1,30 +1,34 @@
 import { Fragment } from 'react';
 import { createPortal } from 'react-dom';
+import { cartActions } from '../../store/index';
+import { useDispatch } from 'react-redux';
 
 import classes from './Modal.module.css';
 
 const portalOverlay = document.getElementById('overlays');
 
-const Backdrop = (props) => {
-  return <div className={classes.backdrop} onClick={props.onClose}></div>;
+const Backdrop = () => {
+  const dispatch = useDispatch();
+  const hideCartHandler = () => {
+    dispatch(cartActions.showCart(false));
+  };
+
+  return <div className={classes.backdrop} onClick={hideCartHandler}></div>;
 };
 
-const ModalOverlay = (props) => {
+const ModalOverlay = ({ children }) => {
   return (
     <div className={classes.modal}>
-      <div>{props.children}</div>
+      <div>{children}</div>
     </div>
   );
 };
 
-const Modal = (props) => {
+const Modal = ({ children }) => {
   return (
     <Fragment>
-      {createPortal(<Backdrop onClose={props.onClose} />, portalOverlay)}
-      {createPortal(
-        <ModalOverlay>{props.children}</ModalOverlay>,
-        portalOverlay
-      )}
+      {createPortal(<Backdrop />, portalOverlay)}
+      {createPortal(<ModalOverlay>{children}</ModalOverlay>, portalOverlay)}
     </Fragment>
   );
 };
