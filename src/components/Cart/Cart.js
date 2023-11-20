@@ -35,7 +35,7 @@ const Cart = (props) => {
     <Modal >
       <h1>Cart</h1>
       <div className={classes.stay}>
-        Your stay: <Callendar calStyle="light" />
+        Your stay: <Callendar callStyle="light" btnStyle="btn-light" />
       </div>
       <h2>Rooms</h2>
       {items.length !== 0 ? (

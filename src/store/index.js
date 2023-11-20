@@ -4,7 +4,7 @@ const initialState = {
   cartIsShown: false,
   items: [],
   totalAmount: 0,
-  days: { start: null, end: null, days: 0 },
+  days: { start: null, end: null, days: 0, minDate: new Date() },
 };
 
 const cartSlice = createSlice({
@@ -15,7 +15,8 @@ const cartSlice = createSlice({
       state.cartIsShown = action.payload;
     },
     getDate(state, action) {
-      state.days = action.payload;
+      state.days = action.payload
+      console.log(state.days)
     },
     addItem(state, action) {
       state.items.push(action.payload);

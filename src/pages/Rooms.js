@@ -4,17 +4,18 @@ import Callendar from '../components/UI/Callendar';
 import classes from './Rooms.module.css';
 
 const Rooms = () => {
-
   return (
     <section className={classes['main-section']}>
       <h1>Rooms</h1>
-      <div className={classes.stay}>Your stay: <Callendar calStyle="light"/></div>
+      <div className={classes.stay}>
+        Your stay: <Callendar callStyle="light" btnStyle="btn-light" />
+      </div>
       <ul className={classes['rooms-list']}>
         <RoomCard />
         <RoomCard />
         <RoomCard />
       </ul>
-    </ section>
+    </section>
   );
 };
 
