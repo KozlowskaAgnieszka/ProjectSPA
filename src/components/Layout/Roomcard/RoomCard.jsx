@@ -5,7 +5,7 @@ import classes from './RoomCard.module.css';
 import roomPhoto from '../../../assets/room-1.jpg';
 import Button from '../../UI/Button';
 
-const RoomCard = ({ id, name, price, image }) => {
+const RoomCard = ({ id, name, price, image}) => {
   const dispatch = useDispatch();
 
   const addToCartHandler = (id, name, price) => {
@@ -22,7 +22,7 @@ const RoomCard = ({ id, name, price, image }) => {
   return (
     <li className={classes.card}>
       <div className={classes['room-photo']}>
-        <img src={roomPhoto} alt={image.alt} />
+        <img src={`http://localhost:3001/${image.src}`} alt={image.alt} />
       </div>
       <h2 className={classes['room-name']}>{name}</h2>
       <div className={classes['room-footer']}>
