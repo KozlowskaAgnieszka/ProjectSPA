@@ -1,4 +1,4 @@
-import { cartActions } from '../../store/index';
+import { cartActions } from '../../store/cart';
 import { useDispatch, useSelector } from 'react-redux';
 import DatePicker from 'react-datepicker';
 import { addDays, subDays, differenceInDays } from 'date-fns';

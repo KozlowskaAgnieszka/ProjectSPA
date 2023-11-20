@@ -1,4 +1,4 @@
-import { cartActions } from '../../../store/index';
+import { cartActions } from '../../../store/cart';
 import { useDispatch } from 'react-redux';
 
 import classes from './RoomCard.module.css';
