@@ -1,37 +1,18 @@
-import { useState, useEffect } from 'react';
+import { useFetch } from '../hooks/useFetch.js';
+import { fetchAvailableRooms } from '../http.js';
 
 import RoomCard from '../components/Layout/Roomcard/RoomCard';
 import Callendar from '../components/UI/Callendar';
 import Error from './Error';
-import { fetchAvailableRooms } from '../http';
 
 import classes from './Rooms.module.css';
 
 const Rooms = () => {
-  const [rooms, setRooms] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState();
-
-  useEffect(() => {
-    async function fetchRooms() {
-      setIsLoading(true);
-
-      try {
-        const rooms = await fetchAvailableRooms();
-
-        setRooms(rooms);
-      } catch (error) {
-        setError({
-          message:
-            error.message || 'Could not load rooms, please try again later',
-        });
-      }
-
-      setIsLoading(false);
-    }
-
-    fetchRooms();
-  }, []);
+  const {
+    isLoading,
+    fetchedData: rooms,
+    error,
+  } = useFetch(fetchAvailableRooms, []);
 
   if (error) {
     return <Error title="An error occured!" message={error.message} />;
