@@ -1,0 +1,15 @@
+.main-section {
+  background-color: white;
+  margin-top: 4.6rem;
+  height: 100vh;
+}
+
+.treatments-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 0;
+  margin: 0 auto;
+  width: 90%;
+  padding: 0;
+}

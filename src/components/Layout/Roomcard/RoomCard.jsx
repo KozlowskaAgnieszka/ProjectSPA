@@ -1,24 +1,8 @@
-import { cartActions } from '../../../store/cart';
-import { useDispatch } from 'react-redux';
-
 import classes from './RoomCard.module.css';
-import roomPhoto from '../../../assets/room-1.jpg';
 import Button from '../../UI/Button';
+import AddToCartButton from '../../Cart/AddToCartButton';
 
-const RoomCard = ({ id, name, price, image}) => {
-  const dispatch = useDispatch();
-
-  const addToCartHandler = (id, name, price) => {
-    dispatch(
-      cartActions.addItem({
-        id,
-        name,
-        amount: 1,
-        price,
-      })
-    );
-  };
-
+const RoomCard = ({ id, name, price, image }) => {
   return (
     <li className={classes.card}>
       <div className={classes['room-photo']}>
@@ -33,13 +17,7 @@ const RoomCard = ({ id, name, price, image}) => {
           <Button btnStyle="grey" btnSize="small">
             Read more
           </Button>
-          <Button
-            onClick={() => addToCartHandler(id, name, price)}
-            btnStyle="green"
-            btnSize="small"
-          >
-            Add to cart
-          </Button>
+          <AddToCartButton id={id} name={name} price={price} type="room" />
         </div>
       </div>
     </li>

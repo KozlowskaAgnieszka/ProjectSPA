@@ -1,0 +1,44 @@
+.treatment-item {
+    
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgba(34, 34, 34, 0.2);
+  padding: 0.75rem;
+}
+
+.treatment-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.treatment-item:hover {
+  cursor: pointer;
+}
+
+.treatment-title > h2 {
+  font-weight: normal;
+  text-shadow: none;
+  text-transform: none;
+  font-size: 1.3rem;
+}
+
+.treatment-summary {
+  font-size: 1.125rem;
+}
+
+.summary-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  width: 100%;
+  margin: 1.5rem 0;
+  font-size: 1.125rem;
+}
