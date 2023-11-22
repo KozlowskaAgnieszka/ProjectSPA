@@ -1,0 +1,11 @@
+.error {
+    margin-top: 4.6rem;
+    padding-top: 25%;
+    color: #202020;
+    background-color: white;
+    height: 100vh;
+}
+
+.error > p {
+    text-align: center;
+}

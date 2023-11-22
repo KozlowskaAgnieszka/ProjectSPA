@@ -1,6 +1,7 @@
 {
   "name": "it-spa-react",
   "version": "0.1.0",
+  "type": "module",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.7",
@@ -13,14 +14,17 @@
     "react-dom": "^18.2.0",
     "react-redux": "^8.1.3",
     "react-router-dom": "^6.18.0",
-    "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.0.3",
+    "vite": "^4.4.5"
+  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
   },
   "eslintConfig": {
     "extends": [

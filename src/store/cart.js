@@ -16,7 +16,6 @@ const cartSlice = createSlice({
     },
     getDate(state, action) {
       state.days = action.payload;
-      console.log(state.days);
     },
     addItem(state, action) {
       state.items.push(action.payload);

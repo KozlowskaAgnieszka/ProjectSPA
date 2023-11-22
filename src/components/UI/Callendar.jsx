@@ -30,7 +30,7 @@ const Callendar = ({ callStyle, btnStyle }) => {
   };
 
   const callendarStyle = `${classes['callendar-input']} ${classes[callStyle]}`;
-  const clearButtonStyle = `${classes['clear-button']} ${classes[btnStyle]}`
+  const clearButtonStyle = `${classes['clear-button']} ${classes[btnStyle]}`;
 
   return (
     <DatePicker

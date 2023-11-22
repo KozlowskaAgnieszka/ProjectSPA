@@ -4,7 +4,7 @@ import DeleteIconImage from '../../assets/icons/delete.svg';
 
 const CartRoomItem = ({ days, name, price, onRemove }) => {
   const stayCheck = () => {
-    if (days === 0) {
+    if (!days) {
       return <span>Choose min 1 night...</span>;
     }
 
@@ -28,7 +28,7 @@ const CartRoomItem = ({ days, name, price, onRemove }) => {
       <div className={classes['room-details']}>
         <span>{name}</span>
         {stayCheck()}
-        {days !== 0 ? <span>{price} $</span> : null}
+        {days ? <span>{price} $</span> : null}
       </div>
       <span>
         <button className={classes.button} onClick={onRemove}>
