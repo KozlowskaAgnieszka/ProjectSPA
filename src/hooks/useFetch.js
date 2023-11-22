@@ -25,8 +25,6 @@ export function useFetch(fetchFn, initialValue) {
     fetchData();
   }, [fetchFn]);
 
-  console.log(isLoading)
-
   return {
     isLoading,
     error,
