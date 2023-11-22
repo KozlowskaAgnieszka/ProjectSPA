@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-export function useFetch(fetchFn, initialValue) {
+export function useFetch(fetchFn, route, initialValue) {
   const [isLoading, setIsLoading] = useState();
   const [error, setError] = useState();
   const [fetchedData, setfetchedData] = useState(initialValue);
@@ -10,7 +10,7 @@ export function useFetch(fetchFn, initialValue) {
       setIsLoading(true);
 
       try {
-        const data = await fetchFn();
+        const data = await fetchFn(route);
 
         setfetchedData(data);
       } catch (error) {

@@ -1,15 +1,24 @@
 .treatment-item {
-    
   display: flex;
   flex-direction: column;
   border-top: 1px solid rgba(34, 34, 34, 0.2);
-  padding: 0.75rem;
+  padding: 0 0.75rem;
+}
+
+.treatment-item:last-of-type {
+  border-bottom: 1px solid rgba(34, 34, 34, 0.2);
 }
 
 .treatment-title {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.treatment-name{
+  font-weight: normal;
+  font-size: 1.3rem;
+  margin:0;
 }
 
 .treatment-item:hover {

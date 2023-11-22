@@ -24,6 +24,14 @@ app.get('/rooms', async (req, res) => {
   res.status(200).json({ rooms: roomsData });
 });
 
+app.get('/treatments', async (req, res) => {
+  const fileContent = await fs.readFile('./data/treatments.json');
+
+  const treatmentsData = JSON.parse(fileContent);
+
+  res.status(200).json({ treatments: treatmentsData });
+});
+
 //404
 app.use((req, res, next) => {
     if (req.method === 'OPTIONS') {

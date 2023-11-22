@@ -1,5 +1,5 @@
 import { useFetch } from '../hooks/useFetch.js';
-import { fetchAvailableRooms } from '../http.js';
+import { fetchData } from '../http.js';
 
 import RoomCard from '../components/Layout/Roomcard/RoomCard';
 import Callendar from '../components/UI/Callendar';
@@ -12,7 +12,7 @@ const Rooms = () => {
     isLoading,
     fetchedData: rooms,
     error,
-  } = useFetch(fetchAvailableRooms, []);
+  } = useFetch(fetchData, 'rooms', []);
 
   if (error) {
     return <Error title="An error occured!" message={error.message} />;

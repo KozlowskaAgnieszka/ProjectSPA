@@ -2,11 +2,10 @@ import { useState, useRef, useEffect } from 'react';
 
 import Icon from '../../../UI/Icon';
 import ExpandIconImage from '../../../../assets/icons/expand.svg';
-import Button from '../../../UI/Button';
 import classes from './TreatmentItem.module.css';
 import AddToCartButton from '../../../Cart/AddToCartButton';
 
-const TreatmentItem = ({ id, name, area, duration, price }) => {
+const TreatmentItem = ({ id, name, description, area, duration, price }) => {
   const treatmentTitle = useRef();
   const [summaryIsShown, setSummaryIsShown] = useState(false);
 
@@ -20,12 +19,12 @@ const TreatmentItem = ({ id, name, area, duration, price }) => {
   return (
     <li className={classes['treatment-item']}>
       <title ref={treatmentTitle} className={classes['treatment-title']}>
-        <h2>{name}</h2>
+        <h3 className={classes['treatment-name']}>{name}</h3>
         <Icon image={ExpandIconImage} alt="Show more icon" />
       </title>
       {summaryIsShown && (
         <summary>
-          <p className={classes['treatment-summary']}>opis</p>
+          <p className={classes['treatment-summary']}>{description}</p>
           <div className={classes['summary-footer']}>
             <ul className={classes['footer-items']}>
               <li>

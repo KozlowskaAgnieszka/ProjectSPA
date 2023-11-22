@@ -1,64 +1,67 @@
 [
-    {
-      "id": 1,
-      "type": "treatment",
-      "name": "Masaż rozgrzanym monitorem",
-      "area": "back",
-      "time": 30,
-      "price": 80,
-      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
-    },
-    {
-      "id": 2,
-      "type": "treatment",
-      "name": "Biczowanie kablem od myszy",
-      "area": "back",
-      "time": 20,
-      "price": 70,
-      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
-    },
-    {
-      "id": 3,
-      "type": "treatment",
-      "name": "Peeling odłamkami płyty CD",
-      "area": "face",
-      "time": 15,
-      "price": 50,
-      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
-    },
-    {
-      "id": 4,
-      "type": "treatment",
-      "name": "Pedicure woskiem z USB",
-      "area": "legs",
-      "time": 25,
-      "price": 100,
-      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
-    },
-    {
-      "id": 5,
-      "type": "treatment",
-      "name": "Manicure analogowo-cyfrowy",
-      "area": "hands",
-      "time": 45,
-      "price": 150,
-      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
-    },
-    {
-      "id": 6,
-      "type": "treatment",
-      "name": "Kąpiel w gorącej kawie",
-      "area": "body",
-      "time": 60,
-      "price": 200,
-      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
-    },
-    {
-      "id": 7,
-      "type": "treatment",
-      "name": "Depilacja dyskiem twardym",
-      "area": "body",
-      "time": 45,
-      "price": 120,
-      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
-    }]
+  {
+    "id": "t1",
+    "name": "Hot Candle Massage",
+    "area": "body",
+    "time": 30,
+    "price": 80,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus urna duis convallis convallis tellus id. Tempus iaculis urna id volutpat lacus laoreet non. "
+  },
+  {
+    "id": "t2",
+    "name": "Traditional Thai Massage",
+    "area": "body",
+    "time": 20,
+    "price": 70,
+    "description": "Leo urna molestie at elementum eu. Eu non diam phasellus vestibulum lorem sed risus ultricies."
+  },
+  {
+    "id": "t3",
+    "name": "Chemical peels",
+    "area": "facial",
+    "time": 15,
+    "price": 50,
+    "description": "In vitae turpis massa sed elementum tempus egestas sed sed. Nam at lectus urna duis. Nunc id cursus metus aliquam eleifend mi in. "
+  },
+  {
+    "id": "t4",
+
+    "name": "Pedicure with SPA",
+    "area": "nail",
+    "time": 25,
+    "price": 100,
+    "description": "In ante metus dictum at tempor. Adipiscing elit pellentesque habitant morbi tristique senectus et. "
+  },
+  {
+    "id": "t5",
+    "name": "Classic Manicure",
+    "area": "nail",
+    "time": 45,
+    "price": 150,
+    "description": "Fringilla phasellus faucibus scelerisque eleifend donec. Pellentesque id nibh tortor id aliquet lectus proin nibh nisl. "
+  },
+  {
+    "id": "t6",
+    "name": "Miracle Body Peel",
+    "area": "body",
+    "time": 60,
+    "price": 200,
+    "description": "Pharetra sit amet aliquam id diam. Tortor vitae purus faucibus ornare suspendisse sed nisi lacus."
+  },
+  {
+    "id": "t7",
+    "name": "Sugar Paste Depilation",
+    "area": "body",
+    "time": 45,
+    "price": 120,
+    "description": "Viverra accumsan in nisl nisi. Semper eget duis at tellus at urna condimentum mattis pellentesque. Semper quis lectus nulla at volutpat diam ut. Nunc sed id semper risus in hendrerit gravida."
+  },
+  {
+    "id": "t8",
+    "name": "Luxury Facial Massage",
+    "area": "facial",
+    "time": 60,
+    "price": 170,
+    "description": "Consequat semper viverra nam libero justo laoreet sit amet cursus. Duis ut diam quam nulla porttitor massa id. Justo nec ultrices dui sapien eget mi proin. Lacus laoreet non curabitur gravida arcu ac."
+  }
+]
