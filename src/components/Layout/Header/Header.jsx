@@ -15,15 +15,11 @@ const Header = () => {
         <NavLink to="/">
           <Icon image={HomeIconImage} alt="Home icon" />
         </NavLink>
-        <NavLink to="/rooms">
-          <HeaderLink>Rooms</HeaderLink>
-        </NavLink>
-        <HeaderLink>Treatments</HeaderLink>
+        <HeaderLink route="/rooms">Rooms</HeaderLink>
+        <HeaderLink route="/treatments">Treatments</HeaderLink>
       </span>
       <span className={classes.logo}>
-        <NavLink to="/">
-          <HeaderLogo />
-        </NavLink>
+        <HeaderLogo route="/" />
       </span>
       <span className={classes.nav}>
         <HeaderCartButton />

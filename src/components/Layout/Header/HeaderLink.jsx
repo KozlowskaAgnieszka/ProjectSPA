@@ -1,10 +1,13 @@
+import { NavLink } from 'react-router-dom';
 import classes from './HeaderLink.module.css';
 
-const HeaderLink = ({ onClick, type, children }) => {
+const HeaderLink = ({ route, children }) => {
   return (
-    <button className={classes.button} onClick={onClick}>
-      <span className={classes[type]}>{children}</span>
-    </button>
+    <NavLink to={route}>
+      <button className={classes.button}>
+        <span>{children}</span>
+      </button>
+    </NavLink>
   );
 };
 

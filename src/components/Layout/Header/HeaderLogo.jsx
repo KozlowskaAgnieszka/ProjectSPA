@@ -1,12 +1,15 @@
+import { NavLink } from 'react-router-dom';
 import Logo from '../../../assets/lotus.png';
 import classes from './HeaderLogo.module.css';
 
-const HeaderLogo = () => {
+const HeaderLogo = ({ route }) => {
   return (
-    <button className={classes.button}>
-      <img className={classes.logo} src={Logo} alt="Lotus logo" />
-      <div className={classes.title}>Lotus SPA</div>
-    </button>
+    <NavLink to={route}>
+      <button className={classes.button}>
+        <img className={classes.logo} src={Logo} alt="Lotus logo" />
+        <div className={classes.title}>Lotus SPA</div>
+      </button>
+    </NavLink>
   );
 };
 
