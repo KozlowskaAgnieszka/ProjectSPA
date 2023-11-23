@@ -7,7 +7,7 @@ import classes from './HeaderCartButon.module.css';
 
 const HeaderCartButton = () => {
   const dispatch = useDispatch();
-  const items = useSelector((state) => state.cart.items.rooms);
+  const items = useSelector((state) => state.cart.items.rooms.concat(state.cart.items.treatments));
 
   const showCartHandler = () => {
     dispatch(cartActions.showCart(true));
