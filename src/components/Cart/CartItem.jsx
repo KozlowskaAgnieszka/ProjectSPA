@@ -3,7 +3,7 @@ import DeleteIconImage from '../../assets/icons/delete.svg';
 
 import classes from './CartItem.module.css';
 
-const CartItem = ({ type, name, price, days, onRemove }) => {
+const CartItem = ({ type, amount, name, price, days, onRemove }) => {
   const stayCheck = () => {
     if (!days) {
       return <span>Choose min 1 night...</span>;
@@ -24,20 +24,24 @@ const CartItem = ({ type, name, price, days, onRemove }) => {
     );
   };
 
-   return (
+  return (
     <li className={classes['item']}>
-    <div className={classes['details']}>
-      <span>{name}</span>
-      {stayCheck()}
-      <span>{price} $</span>
-    </div>
-    <span>
-      <button className={classes.button} onClick={onRemove}>
-        <Icon image={DeleteIconImage} alt="Delete icon" />
-      </button>
-    </span>
-  </li>
-    
+      <div className={classes['details']}>
+        <span>{name}</span>
+        {type === 'room' && stayCheck()}
+        {type === 'treatment' && (
+          <span>
+            <strong>x {amount}</strong>
+          </span>
+        )}
+        <span>{price} $</span>
+      </div>
+      <span>
+        <button className={classes.button} onClick={onRemove}>
+          <Icon image={DeleteIconImage} alt="Delete icon" />
+        </button>
+      </span>
+    </li>
   );
 };
 
