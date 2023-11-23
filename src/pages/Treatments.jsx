@@ -1,7 +1,7 @@
 import { useFetch } from '../hooks/useFetch';
 import { fetchData } from '../http.js';
 
-import TreatmentItem from '../components/Layout/Roomcard/TreatmentItem/TreatmentItem';
+import TreatmentItem from '../components/Layout/TreatmentItem/TreatmentItem.jsx';
 
 import classes from './Treatments.module.css';
 

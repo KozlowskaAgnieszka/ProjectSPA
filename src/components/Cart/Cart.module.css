@@ -8,7 +8,7 @@
   font-size: 1.1rem;
 }
 
-.room-list {
+.items-list {
   display: flex;
   flex-direction: column;
   gap: 0;

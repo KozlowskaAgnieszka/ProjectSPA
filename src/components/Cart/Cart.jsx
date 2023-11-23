@@ -3,28 +3,47 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import classes from './Cart.module.css';
 import Modal from '../UI/Modal';
-import CartRoomItem from './CartRoomItem';
+import CartItem from './CartItem';
 import Callendar from '../UI/Callendar';
 
 const Cart = (props) => {
   const dispatch = useDispatch();
-  const items = useSelector((state) => state.cart.items);
+  const rooms = useSelector((state) => state.cart.items.rooms);
+  const treatments = useSelector((state) => state.cart.items.treatments);
   const days = useSelector((state) => state.cart.days.days);
 
-  const removeItemFromCartHandler = (id) => {
-    dispatch(cartActions.deleteItem(id));
+  const removeItemFromCartHandler = (id, type) => {
+    dispatch(cartActions.deleteItem([id, type]));
   };
 
-  const cartItems = (
-    <ul className={classes['room-list']}>
-      {items.map((item) => {
+  const cartRoomItems = (
+    <ul className={classes['items-list']}>
+      {rooms.map((room) => {
         return (
-          <CartRoomItem
-            key={item.id}
-            name={item.name}
+          <CartItem
+            type={room.type}
+            key={room.id}
+            name={room.name}
             days={days}
-            onRemove={removeItemFromCartHandler.bind(null, item.id)}
-            price={(item.price * days).toFixed(2)}
+            onRemove={removeItemFromCartHandler.bind(null, room.id, room.type)}
+            price={(room.price * days).toFixed(2)}
+          />
+        );
+      })}
+    </ul>
+  );
+
+  const cartTreatmentsItems = (
+    <ul className={classes['items-list']}>
+      {treatments.map((treatment) => {
+        return (
+          <CartItem
+            type={treatment.type}
+            key={treatment.id}
+            name={treatment.name}
+            amount={treatment.amount}
+            onRemove={removeItemFromCartHandler.bind(null, treatment.id, treatment.type)}
+            price={(treatment.price * treatment.amount).toFixed(2)}
           />
         );
       })}
@@ -32,22 +51,24 @@ const Cart = (props) => {
   );
 
   return (
-    <Modal >
+    <Modal>
       <h1>Cart</h1>
       <div className={classes.stay}>
         Your stay: <Callendar callStyle="light" btnStyle="btn-light" />
       </div>
       <h2>Rooms</h2>
-      {items.length !== 0 ? (
-        cartItems
+      {rooms.length !== 0 ? (
+        cartRoomItems
       ) : (
-        <div to="/rooms" className={classes.placeholder}>
-          Select a room...
-        </div>
+        <div className={classes.placeholder}>Select a room...</div>
       )}
 
       <h2>Treatments</h2>
-      <div>Nothing selected yet...</div>
+      {treatments.length !== 0 ? (
+        cartTreatmentsItems
+      ) : (
+        <div className={classes.placeholder}>Select a treatment...</div>
+      )}
     </Modal>
   );
 };
