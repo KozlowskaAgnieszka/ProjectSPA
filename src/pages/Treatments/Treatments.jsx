@@ -51,15 +51,15 @@ const Treatments = () => {
       )}
       {!isLoading && treatments.length > 0 && (
         <>
-          <h2>Body Treatments</h2>
+          <h2 className={classes['treatments-area']}>Body Treatments</h2>
           <ul className={classes['treatments-list']}>
             {treatmentArea('body')}
           </ul>
-          <h2>Facial Treatments</h2>
+          <h2 className={classes['treatments-area']}>Facial Treatments</h2>
           <ul className={classes['treatments-list']}>
             {treatmentArea('facial')}
           </ul>
-          <h2>Nail Treatments</h2>
+          <h2 className={classes['treatments-area']}>Nail Treatments</h2>
           <ul className={classes['treatments-list']}>
             {treatmentArea('nail')}
           </ul>

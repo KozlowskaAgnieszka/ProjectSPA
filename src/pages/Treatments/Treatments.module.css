@@ -3,6 +3,10 @@
   margin-top: 4.6rem;
 }
 
+.treatments-area {
+  text-shadow: none;
+}
+
 .treatments-list {
   display: flex;
   flex-direction: column;

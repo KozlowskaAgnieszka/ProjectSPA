@@ -16,9 +16,11 @@
 }
 
 .room-name {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: normal;
-  margin: 0.5rem;
+  text-align: left;
+  text-shadow: none;
+  text-transform: none;
 }
 
 .room-footer {
