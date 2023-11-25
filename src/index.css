@@ -2,9 +2,21 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
   font-family: 'Poppins', 'Arial', sans-serif;
 }
 
+h1 {
+  font-size: 2.3rem;
+  letter-spacing: 0.06em;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  padding: 1.5rem;
+  margin: 0.75rem 0;
+}

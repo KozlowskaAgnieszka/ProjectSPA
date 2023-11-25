@@ -1,18 +1,14 @@
-import { useSelector } from 'react-redux';
-
 import Header from './Header/Header';
-import Cart from '../Cart/Cart';
 
 import classes from './Layout.module.css';
 
-const Layout = ({ background, children }) => {
-  const cartIsShown = useSelector((state) => state.cart.cartIsShown);
-
+const Layout = ({ children }) => {
   return (
     <>
-      {cartIsShown && <Cart />}
       <Header />
-      <main className={classes[background]}>{children}</main>
+      <main className={classes['background-image']}>
+        <div className={classes.overlay}>{children}</div>
+      </main>
     </>
   );
 };

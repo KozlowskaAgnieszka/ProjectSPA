@@ -1,8 +1,11 @@
+import { useAddToCart } from '../../../hooks/useAddToCart';
+
+import Button from '../../UI/Button/Button';
 import classes from './RoomCard.module.css';
-import Button from '../../UI/Button';
-import AddToCartButton from '../../Cart/AddToCartButton';
 
 const RoomCard = ({ id, name, price, image }) => {
+  const addToCartHandler = useAddToCart(id, name, price, 'room');
+
   return (
     <li className={classes.card}>
       <div className={classes['room-photo']}>
@@ -17,7 +20,15 @@ const RoomCard = ({ id, name, price, image }) => {
           <Button btnStyle="grey" btnSize="small">
             Read more
           </Button>
-          <AddToCartButton id={id} name={name} price={price} type="room" />
+          <Button
+            onClick={() => {
+              addToCartHandler();
+            }}
+            btnStyle="green"
+            btnSize="small"
+          >
+            Add to cart
+          </Button>
         </div>
       </div>
     </li>

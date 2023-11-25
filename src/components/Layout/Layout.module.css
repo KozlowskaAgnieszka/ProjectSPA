@@ -1,16 +1,22 @@
-.background-image{
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: 0;
-    background-image: url('../../assets/heroImage.jpg') !important;
-    background-position: center;
-    background-size: cover;
-    height: 100vh;
-    width: 100%;
-    z-index: 1;
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  background-image: url('../../assets/heroImage.jpg');
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
 }
 
-.background-white {
-    background-image: none;
+.overlay {
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
 }

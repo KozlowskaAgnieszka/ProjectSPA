@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import { createPortal } from 'react-dom';
-import { cartActions } from '../../store/cart';
+import { cartActions } from '../../../store/cart';
 import { useDispatch } from 'react-redux';
 
 import classes from './Modal.module.css';

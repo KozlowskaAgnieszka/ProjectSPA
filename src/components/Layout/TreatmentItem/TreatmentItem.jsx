@@ -1,13 +1,15 @@
 import { useState, useRef, useEffect } from 'react';
+import { useAddToCart } from '../../../hooks/useAddToCart';
 
-import Icon from '../../UI/Icon';
+import Icon from '../../UI/Icon/Icon';
+import Button from '../../UI/Button/Button';
 import ExpandIconImage from '../../../assets/icons/expand.svg';
 import classes from './TreatmentItem.module.css';
-import AddToCartButton from '../../Cart/AddToCartButton';
 
 const TreatmentItem = ({ id, name, description, area, duration, price }) => {
   const treatmentTitle = useRef();
   const [summaryIsShown, setSummaryIsShown] = useState(false);
+  const addToCartHandler = useAddToCart(id, name, price, 'treatment');
 
   useEffect(() => {
     treatmentTitle.current.addEventListener('click', () => {
@@ -37,13 +39,15 @@ const TreatmentItem = ({ id, name, description, area, duration, price }) => {
                 Price: <strong> {price} $</strong>
               </li>
               <li>
-                <AddToCartButton
-                  id={id}
-                  name={name}
-                  price={price}
-                  type="treatment"
-         
-                />
+                <Button
+                  onClick={() => {
+                    addToCartHandler();
+                  }}
+                  btnStyle="green"
+                  btnSize="small"
+                >
+                  Add to cart
+                </Button>
               </li>
             </ul>
           </div>

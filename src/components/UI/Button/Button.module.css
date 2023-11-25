@@ -1,4 +1,4 @@
-.button {
+button {
   cursor: pointer;
   color: white;
   letter-spacing: 0.09em;
@@ -9,9 +9,11 @@
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* .button:hover {
-  box-shadow: 2px 2px 12px rgba(163, 163, 163, 0.4);
-} */
+.no-shadow {
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+}
 
 .green {
   background-color: rgba(101, 136, 10, 0.75);

@@ -1,9 +1,9 @@
-import { useFetch } from '../hooks/useFetch.js';
-import { fetchData } from '../http.js';
+import { useFetch } from '../../hooks/useFetch.js';
+import { fetchData } from '../../http.js';
 
-import RoomCard from '../components/Layout/Roomcard/RoomCard';
-import Callendar from '../components/UI/Callendar';
-import Error from './Error';
+import RoomCard from '../../components/Layout/Roomcard/RoomCard.jsx';
+import Callendar from '../../components/UI/Callendar/Callendar.jsx';
+import Error from '../Error/Error.jsx';
 
 import classes from './Rooms.module.css';
 

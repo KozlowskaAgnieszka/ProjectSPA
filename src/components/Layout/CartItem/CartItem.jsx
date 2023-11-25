@@ -1,7 +1,8 @@
-import Icon from '../UI/Icon';
-import DeleteIconImage from '../../assets/icons/delete.svg';
+import Icon from '../../UI/Icon/Icon';
+import DeleteIconImage from '../../../assets/icons/delete.svg';
 
 import classes from './CartItem.module.css';
+import Button from '../../UI/Button/Button';
 
 const CartItem = ({ type, amount, name, price, days, onRemove }) => {
   const stayCheck = () => {
@@ -37,9 +38,9 @@ const CartItem = ({ type, amount, name, price, days, onRemove }) => {
         <span>{price} $</span>
       </div>
       <span>
-        <button className={classes.button} onClick={onRemove}>
+        <Button btnShadow="no-shadow" onClick={onRemove}>
           <Icon image={DeleteIconImage} alt="Delete icon" />
-        </button>
+        </Button>
       </span>
     </li>
   );

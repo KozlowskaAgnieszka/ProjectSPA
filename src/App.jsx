@@ -1,18 +1,20 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Layout from './components/Layout/Layout';
-import HomePage from './pages/HomePage';
-import Rooms from './pages/Rooms';
-import Treatments from './pages/Treatments';
+import HomePage from './pages/HomePage/HomePage';
+import Rooms from './pages/Rooms/Rooms';
+import Treatments from './pages/Treatments/Treatments';
+import Cart from './pages/Cart/Cart';
 
 function App() {
   return (
     <BrowserRouter>
-      <Layout background={'background-image'}>
+      <Layout>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/rooms" element={<Rooms />} />
           <Route path="/treatments" element={<Treatments />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
       </Layout>
     </BrowserRouter>

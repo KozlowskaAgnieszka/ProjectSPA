@@ -2,9 +2,8 @@ import { cartActions } from '../../store/cart';
 import { useDispatch, useSelector } from 'react-redux';
 
 import classes from './Cart.module.css';
-import Modal from '../UI/Modal';
-import CartItem from './CartItem';
-import Callendar from '../UI/Callendar';
+import CartItem from '../../components/Layout/CartItem/CartItem';
+import Callendar from '../../components/UI/Callendar/Callendar';
 
 const Cart = (props) => {
   const dispatch = useDispatch();
@@ -42,7 +41,11 @@ const Cart = (props) => {
             key={treatment.id}
             name={treatment.name}
             amount={treatment.amount}
-            onRemove={removeItemFromCartHandler.bind(null, treatment.id, treatment.type)}
+            onRemove={removeItemFromCartHandler.bind(
+              null,
+              treatment.id,
+              treatment.type
+            )}
             price={(treatment.price * treatment.amount).toFixed(2)}
           />
         );
@@ -51,10 +54,10 @@ const Cart = (props) => {
   );
 
   return (
-    <Modal>
+    <section className={classes['section-frame']}>
       <h1>Cart</h1>
       <div className={classes.stay}>
-        Your stay: <Callendar callStyle="light" btnStyle="btn-light" />
+        Your stay: <Callendar />
       </div>
       <h2>Rooms</h2>
       {rooms.length !== 0 ? (
@@ -69,7 +72,7 @@ const Cart = (props) => {
       ) : (
         <div className={classes.placeholder}>Select a treatment...</div>
       )}
-    </Modal>
+    </section>
   );
 };
 

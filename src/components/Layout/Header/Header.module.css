@@ -4,15 +4,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: absolute;
-  background-image: linear-gradient(
-    to bottom,
-    rgba(45, 45, 45, 0.75),
-    rgba(45, 45, 45, 0.6)
-  );
+  position: fixed;
   z-index: 10;
   top: 0;
-  left:0;
+  left: 0;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.25)
+  );
+  background-attachment: fixed;
+  background-size: cover;
+  padding-right: 2rem;
 }
 
 .nav {
@@ -20,9 +23,60 @@
   align-items: center;
 }
 
+.link {
+  text-decoration: none;
+  color: white;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
+  margin-left:15px;
+}
+
+.link:active,
+.link:focus,
+.link:hover {
+  text-shadow: 4px 4px 8px rgba(255, 255, 255, 0.7);
+}
+
 .logo {
   position: absolute;
   top: 0;
   left: 50%;
   transform: translate(-50%, 0);
+}
+
+.logo-image {
+  height: 3rem;
+  width: 3rem;
+  filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.7));
+}
+
+.logo-title {
+  font-family: 'Cinzel Decorative', cursive;
+  color: white;
+  font-weight: bold;
+  font-size: 0.875rem;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.7);
+}
+
+
+.badge {
+  background: rgba(50, 50, 50, 0.75);
+  border: 2px solid #aeaeae;
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+  text-align: center;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.7);
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  right: 2rem;
+  bottom: 0.6rem;
+  margin: 0;
 }

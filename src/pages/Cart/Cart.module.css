@@ -1,6 +1,21 @@
+.section-frame {
+  position:relative;
+  top: 20vh;
+  left: 5%;
+  width: 90%;
+  background: rgba(50, 50, 50, 0.75);
+  border: 1px solid #aeaeae;
+  border-radius: 0.3rem;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  z-index: 30;
+  color: white;
+}
+
 .stay {
   display: flex;
   align-items: center;
+  gap: 1rem;
   width: 90%;
   text-transform: uppercase;
   margin: 1rem auto;

@@ -1,7 +1,8 @@
-import { useFetch } from '../hooks/useFetch';
-import { fetchData } from '../http.js';
+import { useFetch } from '../../hooks/useFetch.js';
+import { fetchData } from '../../http.js';
 
-import TreatmentItem from '../components/Layout/TreatmentItem/TreatmentItem.jsx';
+import TreatmentItem from '../../components/Layout/TreatmentItem/TreatmentItem.jsx';
+import Error from '../Error/Error.jsx';
 
 import classes from './Treatments.module.css';
 

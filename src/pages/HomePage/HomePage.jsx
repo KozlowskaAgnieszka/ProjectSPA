@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 
-import Button from '../components/UI/Button';
-import Callendar from '../components/UI/Callendar';
+import Button from '../../components/UI/Button/Button';
+import Callendar from '../../components/UI/Callendar/Callendar';
 
-import Logo from '../assets/lotus.png';
+import Logo from '../../assets/lotus.png';
 import classes from './HomePage.module.css';
 
 const HomePage = () => {
