@@ -30,3 +30,9 @@ h2 {
   letter-spacing: 0.09em;
   text-transform: uppercase; 
 }
+
+a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
