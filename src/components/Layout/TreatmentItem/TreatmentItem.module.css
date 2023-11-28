@@ -15,10 +15,10 @@
   justify-content: space-between;
 }
 
-.treatment-name{
+.treatment-name {
   font-weight: normal;
   font-size: 1.3rem;
-  margin:0;
+  margin: 0;
 }
 
 .treatment-item:hover {
@@ -37,17 +37,7 @@
 }
 
 .summary-footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.footer-items {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  list-style: none;
-  width: 100%;
-  margin: 1.5rem 0;
-  font-size: 1.125rem;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 20%;
 }

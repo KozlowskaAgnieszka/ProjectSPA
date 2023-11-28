@@ -1,0 +1,10 @@
+.item-details {
+  margin: 0.5rem 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}

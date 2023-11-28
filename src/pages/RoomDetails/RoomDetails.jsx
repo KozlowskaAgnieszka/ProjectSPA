@@ -3,6 +3,7 @@ import { useFetch } from '../../hooks/useFetch.js';
 import { useAddToCart } from '../../hooks/useAddToCart';
 import { fetchRoom } from '../../http.js';
 
+import ItemDetails from '../../components/Layout/ItemDetails/ItemDetails.jsx';
 import Button from '../../components/UI/Button/Button';
 import Icon from '../../components/UI/Icon/Icon.jsx';
 import Callendar from '../../components/UI/Callendar/Callendar';
@@ -11,7 +12,6 @@ import classes from './RoomDetails.module.css';
 
 const RoomDetails = () => {
   const { roomId } = useParams();
-  
 
   const {
     isLoading,
@@ -45,23 +45,18 @@ const RoomDetails = () => {
             </div>
             <div className={classes['room-description']}>
               <h1>{room.name}</h1>
-              <ul className={classes['room-details']}>
-                <li>
-                  Price: <strong>{room.price}</strong>
-                </li>
-                <li>
-                  Guests: <strong>{room.guests}</strong>
-                </li>
-                <li>
-                  Beds: <strong>{room.beds}</strong>
-                </li>
-              </ul>
-              <p className={classes['room-text']}>{room.description}</p>
+              <ItemDetails
+                price={room.price}
+                guests={room.guests}
+                beds={room.beds}
+              />
+              <article className={classes['room-text']}>
+                {room.description}
+              </article>
               <div className={classes['room-footer']}>
                 <Link to="/rooms">
                   <Icon image={BackIconImage} alt="Back Icon" />
                 </Link>
-
                 <div className={classes.stay}>
                   <p>Your stay: </p>
                   <Callendar

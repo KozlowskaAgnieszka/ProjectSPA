@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-
 import { useAddToCart } from '../../../hooks/useAddToCart';
 
+import ItemDetails from '../ItemDetails/ItemDetails';
 import Button from '../../UI/Button/Button';
 import classes from './RoomCard.module.css';
 
@@ -15,9 +15,7 @@ const RoomCard = ({ id, name, price, image, index }) => {
       </div>
       <h2 className={classes['room-name']}>{name}</h2>
       <div className={classes['room-footer']}>
-        <p className={classes['room-footer-price']}>
-          Price: <strong>{price} $</strong>
-        </p>
+        <ItemDetails price={price} />
         <div className={classes['room-footer-buttons']}>
           <Link to={`/rooms/${index}`}>
             <Button btnStyle="grey" btnSize="small">

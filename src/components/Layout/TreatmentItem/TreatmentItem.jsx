@@ -5,6 +5,7 @@ import Icon from '../../UI/Icon/Icon';
 import Button from '../../UI/Button/Button';
 import ExpandIconImage from '../../../assets/icons/expand.svg';
 import classes from './TreatmentItem.module.css';
+import ItemDetails from '../ItemDetails/ItemDetails';
 
 const TreatmentItem = ({ id, name, description, area, duration, price }) => {
   const treatmentTitle = useRef();
@@ -28,28 +29,16 @@ const TreatmentItem = ({ id, name, description, area, duration, price }) => {
         <summary>
           <p className={classes['treatment-summary']}>{description}</p>
           <div className={classes['summary-footer']}>
-            <ul className={classes['footer-items']}>
-              <li>
-                Area: <strong> {area}</strong>
-              </li>
-              <li>
-                Duration: <strong> {duration} min</strong>
-              </li>
-              <li>
-                Price: <strong> {price} $</strong>
-              </li>
-              <li>
-                <Button
-                  onClick={() => {
-                    addToCartHandler();
-                  }}
-                  btnStyle="green"
-                  btnSize="small"
-                >
-                  Add to cart
-                </Button>
-              </li>
-            </ul>
+          <ItemDetails area={ area } duration={ duration } price={ price } />
+            <Button
+              onClick={() => {
+                addToCartHandler();
+              }}
+              btnStyle="green"
+              btnSize="small"
+            >
+              Add to cart
+            </Button>
           </div>
         </summary>
       )}

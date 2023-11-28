@@ -30,12 +30,6 @@
   margin: 8px;
 }
 
-.room-footer-price {
-  font-size: 1rem;
-  margin: 0 0 0.2rem 0.2rem;
-  text-align: center;
-}
-
 .room-footer-buttons {
   display: flex;
   justify-content: space-between;
