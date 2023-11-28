@@ -11,6 +11,7 @@ import classes from './RoomDetails.module.css';
 
 const RoomDetails = () => {
   const { roomId } = useParams();
+  
 
   const {
     isLoading,

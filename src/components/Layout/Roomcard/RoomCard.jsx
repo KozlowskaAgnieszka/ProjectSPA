@@ -5,7 +5,7 @@ import { useAddToCart } from '../../../hooks/useAddToCart';
 import Button from '../../UI/Button/Button';
 import classes from './RoomCard.module.css';
 
-const RoomCard = ({ id, name, price, image }) => {
+const RoomCard = ({ id, name, price, image, index }) => {
   const addToCartHandler = useAddToCart(id, name, price, 'room');
 
   return (
@@ -19,7 +19,7 @@ const RoomCard = ({ id, name, price, image }) => {
           Price: <strong>{price} $</strong>
         </p>
         <div className={classes['room-footer-buttons']}>
-          <Link to={`/rooms/0`}>
+          <Link to={`/rooms/${index}`}>
             <Button btnStyle="grey" btnSize="small">
               Read more
             </Button>

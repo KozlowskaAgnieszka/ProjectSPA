@@ -18,9 +18,7 @@ const Rooms = () => {
     return <Error title="An error occured!" message={error.message} />;
   }
 
-  console.log('isloading', isLoading);
-
-
+  const roomIndex = (id) => rooms.findIndex((room) => room.id === id);
 
   return (
     <section className={classes['main-section']}>
@@ -44,6 +42,7 @@ const Rooms = () => {
                 name={room.name}
                 price={room.price}
                 image={room.image}
+                index={roomIndex(room.id)}
               />
             );
           })}
