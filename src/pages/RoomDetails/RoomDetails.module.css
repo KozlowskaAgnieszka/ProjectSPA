@@ -1,0 +1,59 @@
+.main-section {
+  margin-top: 4.6rem;
+  padding: 1rem 0;
+}
+
+.card {
+  width: 90%;
+  background-color: white;
+  margin: 4.5rem auto;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 4ch 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.room-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.room-description {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.75rem 1.5rem;
+}
+
+.room-details {
+  margin: 0.5rem 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.room-text {
+  line-height: 1.75rem;
+}
+
+.room-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: flex-end;
+  margin-top: 1rem;
+}
+
+.stay {
+  margin: 1rem auto;
+  display: flex;
+  align-items: center;
+}
+
+.stay > p {
+  text-transform: uppercase;
+}
+

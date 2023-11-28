@@ -6,7 +6,7 @@ import { addDays, subDays, differenceInDays } from 'date-fns';
 import 'react-datepicker/dist/react-datepicker.css';
 import classes from './Callendar.module.css';
 
-const Callendar = ({ callStyle, btnStyle }) => {
+const Callendar = ({ callStyle, btnStyle, callSize }) => {
   const dispatch = useDispatch();
   const days = useSelector((state) => state.cart.days);
 
@@ -29,7 +29,7 @@ const Callendar = ({ callStyle, btnStyle }) => {
     );
   };
 
-  const callendarStyle = `${classes['callendar-input']} ${classes[callStyle]}`;
+  const callendarStyle = `${classes['callendar-input']} ${classes[callStyle]} ${classes[callSize]}`;
   const clearButtonStyle = `${classes['clear-button']} ${classes[btnStyle]}`;
 
   return (

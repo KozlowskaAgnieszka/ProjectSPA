@@ -18,6 +18,10 @@ const Rooms = () => {
     return <Error title="An error occured!" message={error.message} />;
   }
 
+  console.log('isloading', isLoading);
+
+
+
   return (
     <section className={classes['main-section']}>
       <h1>Rooms</h1>

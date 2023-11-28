@@ -41,3 +41,9 @@ button {
   padding: 0.5rem 0.75rem;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
+
+.x-small {
+  font-size: 0.9rem;
+  text-transform: none;
+  padding: 0.3rem;
+}

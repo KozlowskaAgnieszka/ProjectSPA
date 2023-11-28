@@ -24,6 +24,16 @@ app.get('/rooms', async (req, res) => {
   res.status(200).json({ rooms: roomsData });
 });
 
+app.get('/rooms/:roomId', async (req, res) => {
+  const roomId = req.params.roomId;
+  const fileContent = await fs.readFile('./data/rooms.json');
+
+  const roomsData = JSON.parse(fileContent);
+  const room = roomsData[roomId];
+
+  res.status(200).json({ room });
+});
+
 app.get('/treatments', async (req, res) => {
   const fileContent = await fs.readFile('./data/treatments.json');
 
@@ -34,10 +44,10 @@ app.get('/treatments', async (req, res) => {
 
 //404
 app.use((req, res, next) => {
-    if (req.method === 'OPTIONS') {
-      return next();
-    }
-    res.status(404).json({ message: '404 - Not Found' });
-  });
-  
-  app.listen(3001);
+  if (req.method === 'OPTIONS') {
+    return next();
+  }
+  res.status(404).json({ message: '404 - Not Found' });
+});
+
+app.listen(3001);
