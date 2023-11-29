@@ -1,10 +1,11 @@
 import { useFetch } from '../../hooks/useFetch.js';
 import { fetchData } from '../../http.js';
+import { getUniqueAreas } from '../../helpers/treatments.js';
 
-import TreatmentItem from '../../components/Layout/TreatmentItem/TreatmentItem.jsx';
 import Error from '../Error/Error.jsx';
 
 import classes from './Treatments.module.css';
+import TreatmentAreaItems from './TreatmentsAreaItems.jsx';
 
 const Treatments = () => {
   const {
@@ -17,29 +18,14 @@ const Treatments = () => {
     return <Error title="An error occured!" message={error.message} />;
   }
 
-  const treatmentArea = (area) => {
-    const filteredTreatments = treatments.filter(
-      (treatment) => treatment.area === area
-    );
-
-    const areaTreatmentList = filteredTreatments.map((treatment) => {
-      return (
-        <TreatmentItem
-          key={treatment.id}
-          id={treatment.id}
-          name={treatment.name}
-          description={treatment.description}
-          area={treatment.area}
-          duration={treatment.time}
-          price={treatment.price}
-        />
-      );
-    });
-    return areaTreatmentList;
+  const filteredTreatments = (area, treatments) => {
+    return treatments.filter((treatment) => treatment.area === area);
   };
 
+  const treatmentsArea = getUniqueAreas(treatments);
+
   return (
-    <section className={classes['main-section']}>
+    <>
       <h1>Treatments</h1>
       {isLoading && (
         <p className={classes['fallback-text']}>
@@ -51,21 +37,23 @@ const Treatments = () => {
       )}
       {!isLoading && treatments.length > 0 && (
         <>
-          <h2 className={classes['treatments-area']}>Body Treatments</h2>
-          <ul className={classes['treatments-list']}>
-            {treatmentArea('body')}
-          </ul>
-          <h2 className={classes['treatments-area']}>Facial Treatments</h2>
-          <ul className={classes['treatments-list']}>
-            {treatmentArea('facial')}
-          </ul>
-          <h2 className={classes['treatments-area']}>Nail Treatments</h2>
-          <ul className={classes['treatments-list']}>
-            {treatmentArea('nail')}
-          </ul>
+          {treatmentsArea.map((area) => {
+            return (
+              <section key={area}>
+                <h2 className={classes['treatments-area']}>
+                  {area} Treatments
+                </h2>
+                <ul className={classes['treatments-list']}>
+                  <TreatmentAreaItems
+                    treatments={filteredTreatments(area, treatments)}
+                  />
+                </ul>
+              </section>
+            );
+          })}
         </>
       )}
-    </section>
+    </>
   );
 };
 

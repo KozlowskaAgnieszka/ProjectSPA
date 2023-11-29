@@ -21,7 +21,7 @@ const Rooms = () => {
   const roomIndex = (id) => rooms.findIndex((room) => room.id === id);
 
   return (
-    <section className={classes['main-section']}>
+    <>
       <h1>Rooms</h1>
       <div className={classes.stay}>
         Your stay: <Callendar callStyle="light" btnStyle="btn-light" />
@@ -48,7 +48,7 @@ const Rooms = () => {
           })}
         </ul>
       )}
-    </section>
+    </>
   );
 };
 

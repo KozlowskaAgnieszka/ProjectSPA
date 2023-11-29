@@ -1,4 +1,4 @@
-.background-image {
+.image-background {
   position: fixed;
   top: 0;
   left: 0;
@@ -9,14 +9,19 @@
   background-size: cover;
   height: 100vh;
   width: 100%;
+  overflow-y: auto;
 }
 
-.overlay {
-  background-color: rgba(0, 0, 0, 0.3);
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  overflow-y: auto;
+.white-overlay {
+  background-color: white;
+  margin-top: 4.6rem;
+  padding-bottom: 1rem;
+}
+
+.transparent-overlay {
+  background-color: rgba(0, 0, 0, 0.45);
+  height:calc(100% + 4rem);
+  margin-top: 4.6rem;
+  padding-top: 0.1rem;
+
 }

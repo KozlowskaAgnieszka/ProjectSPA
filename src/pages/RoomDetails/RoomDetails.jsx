@@ -26,60 +26,58 @@ const RoomDetails = () => {
   const addToCartHandler = useAddToCart(room.id, room.name, room.price, 'room');
 
   return (
-    <section className={classes['main-section']}>
-      <div className={classes.card}>
-        {isLoading && (
-          <p className={classes['fallback-text']}>Room is loading...</p>
-        )}
-        {!isLoading && Object.keys(room).length === 0 && (
-          <p className={classes['fallback-text']}>No room available...</p>
-        )}
-        {!isLoading && Object.keys(room).length > 0 && (
-          <>
-            <div>
-              <img
-                className={classes['room-photo']}
-                src={`http://localhost:3001/${room.image.src}`}
-                alt={room.image.alt}
-              />
-            </div>
-            <div className={classes['room-description']}>
-              <h1>{room.name}</h1>
-              <ItemDetails
-                price={room.price}
-                guests={room.guests}
-                beds={room.beds}
-              />
-              <article className={classes['room-text']}>
-                {room.description}
-              </article>
-              <div className={classes['room-footer']}>
-                <Link to="/rooms">
-                  <Icon image={BackIconImage} alt="Back Icon" />
-                </Link>
-                <div className={classes.stay}>
-                  <p>Your stay: </p>
-                  <Callendar
-                    callSize="small"
-                    callStyle="light"
-                    btnStyle="btn-light"
-                  />
-                </div>
-                <Button
-                  onClick={() => {
-                    addToCartHandler();
-                  }}
-                  btnStyle="green"
-                  btnSize="x-small"
-                >
-                  Add to cart
-                </Button>
+    <div className={classes.card}>
+      {isLoading && (
+        <p className={classes['fallback-text']}>Room is loading...</p>
+      )}
+      {!isLoading && Object.keys(room).length === 0 && (
+        <p className={classes['fallback-text']}>No room available...</p>
+      )}
+      {!isLoading && Object.keys(room).length > 0 && (
+        <>
+          <div>
+            <img
+              className={classes['room-photo']}
+              src={`http://localhost:3001/${room.image.src}`}
+              alt={room.image.alt}
+            />
+          </div>
+          <div className={classes['room-description']}>
+            <h1>{room.name}</h1>
+            <ItemDetails
+              price={room.price}
+              guests={room.guests}
+              beds={room.beds}
+            />
+            <article className={classes['room-text']}>
+              {room.description}
+            </article>
+            <div className={classes['room-footer']}>
+              <Link to="/rooms">
+                <Icon image={BackIconImage} alt="Back Icon" />
+              </Link>
+              <div className={classes.stay}>
+                <p>Your stay: </p>
+                <Callendar
+                  callSize="small"
+                  callStyle="light"
+                  btnStyle="btn-light"
+                />
               </div>
+              <Button
+                onClick={() => {
+                  addToCartHandler();
+                }}
+                btnStyle="green"
+                btnSize="x-small"
+              >
+                Add to cart
+              </Button>
             </div>
-          </>
-        )}
-      </div>
-    </section>
+          </div>
+        </>
+      )}
+    </div>
   );
 };
 

@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
 
 import Layout from './components/Layout/Layout';
 import HomePage from './pages/HomePage/HomePage';
@@ -8,6 +8,7 @@ import Cart from './pages/Cart/Cart';
 import RoomDetails from './pages/RoomDetails/RoomDetails';
 
 function App() {
+
   return (
     <BrowserRouter>
       <Layout>

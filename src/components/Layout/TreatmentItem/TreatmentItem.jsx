@@ -20,7 +20,7 @@ const TreatmentItem = ({ id, name, description, area, duration, price }) => {
     [];
 
   return (
-    <li className={classes['treatment-item']}>
+    <li key={id} className={classes['treatment-item']}>
       <title ref={treatmentTitle} className={classes['treatment-title']}>
         <h3 className={classes['treatment-name']}>{name}</h3>
         <Icon image={ExpandIconImage} alt="Show more icon" />

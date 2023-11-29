@@ -54,7 +54,7 @@ const Cart = (props) => {
   );
 
   return (
-    <section className={classes['section-frame']}>
+    <div className={classes['section-frame']}>
       <h1>Cart</h1>
       <div className={classes.stay}>
         Your stay: <Callendar />
@@ -72,7 +72,7 @@ const Cart = (props) => {
       ) : (
         <div className={classes.placeholder}>Select a treatment...</div>
       )}
-    </section>
+    </div>
   );
 };
 
