@@ -2,9 +2,8 @@ import { useEffect, useState } from 'react';
 import _ from 'lodash';
 
 export function useFetch(fetchFn, route, initialValue) {
-  const [isLoading, setIsLoading] = useState();
+  const [isLoading, setIsLoading] = useState(true);
   const [isEmpty, setIsEmpty] = useState(false);
-  const [image, setImage] = useState({});
   const [error, setError] = useState();
   const [fetchedData, setfetchedData] = useState(initialValue);
 
@@ -30,8 +29,6 @@ export function useFetch(fetchFn, route, initialValue) {
   return {
     isLoading,
     isEmpty,
-    image,
-    setImage,
     error,
     fetchedData,
   };

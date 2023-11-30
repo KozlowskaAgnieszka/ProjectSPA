@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { useFetch } from '../../hooks/useFetch.js';
 import { fetchData } from '../../http.js';
 
@@ -9,16 +10,23 @@ import Error from '../Error/Error.jsx';
 import classes from './Rooms.module.css';
 
 const Rooms = () => {
-  const {
-    isLoading,
-    isEmpty,
-    fetchedData: rooms,
-    error,
-  } = useFetch(fetchData, 'rooms', []);
+  const [rooms, setRooms] = useState([]);
+
+  const { isLoading, isEmpty, fetchedData, error } = useFetch(
+    fetchData,
+    'rooms',
+    []
+  );
 
   if (error) {
     return <Error title="An error occured!" message={error.message} />;
   }
+
+  useEffect(() => {
+    if (!isLoading) {
+      setRooms(fetchedData);
+    }
+  }, [isLoading, fetchedData]);
 
   const roomIndex = (id) => rooms.findIndex((room) => room.id === id);
 

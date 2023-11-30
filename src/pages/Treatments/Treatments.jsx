@@ -1,4 +1,4 @@
-
+import { useState, useEffect } from 'react';
 import { useFetch } from '../../hooks/useFetch.js';
 import { fetchData } from '../../http.js';
 import { getUniqueAreas } from '../../helpers/treatments.js';
@@ -10,22 +10,29 @@ import classes from './Treatments.module.css';
 import TreatmentAreaItems from './TreatmentsAreaItems.jsx';
 
 const Treatments = () => {
-  const {
-    isLoading,
-    isEmpty,
-    fetchedData: treatments,
-    error,
-  } = useFetch(fetchData, 'treatments', []);
+  const [treatments, setTreatments] = useState([]);
+  const [treatmentsArea, setTreatmentsArea] = useState([]);
+
+  const { isLoading, isEmpty, fetchedData, error } = useFetch(
+    fetchData,
+    'treatments',
+    []
+  );
 
   if (error) {
     return <Error title="An error occured!" message={error.message} />;
   }
 
+  useEffect(() => {
+    if (!isLoading) {
+      setTreatments(fetchedData);
+      setTreatmentsArea(getUniqueAreas(fetchedData));
+    }
+  }, [isLoading, fetchedData]);
+
   const filteredTreatments = (area, treatments) => {
     return treatments.filter((treatment) => treatment.area === area);
   };
-
-  const treatmentsArea = getUniqueAreas(treatments);
 
   return (
     <>

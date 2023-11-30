@@ -1,5 +1,5 @@
 import { useParams, Link } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useFetch } from '../../hooks/useFetch.js';
 import { useAddToCart } from '../../hooks/useAddToCart';
 import { fetchData } from '../../http.js';
@@ -11,19 +11,17 @@ import Icon from '../../components/UI/Icon/Icon.jsx';
 import Callendar from '../../components/UI/Callendar/Callendar.jsx';
 import BackIconImage from '../../assets/icons/back.svg';
 import classes from './RoomDetails.module.css';
-import RoomImage from './RoomImage.jsx';
 
 const RoomDetails = () => {
   const { roomId } = useParams();
+  const [image, setImage] = useState({});
+  const [room, setRoom] = useState([]);
 
-  const {
-    isLoading,
-    isEmpty,
-    fetchedData: room,
-    image,
-    setImage,
-    error,
-  } = useFetch(fetchData, `rooms/${roomId}`, []);
+  const { isLoading, isEmpty, fetchedData, error } = useFetch(
+    fetchData,
+    `rooms/${roomId}`,
+    []
+  );
 
   if (error) {
     return <Error title="An error occured!" message={error.message} />;
@@ -31,9 +29,13 @@ const RoomDetails = () => {
 
   useEffect(() => {
     if (!isLoading) {
-      setImage({ url: 'http://localhost:3001/', ...room.image });
+      setRoom(fetchedData);
+      setImage({
+        src: `http://localhost:3001/${fetchedData.image.src}`,
+        alt: fetchedData.image.alt,
+      });
     }
-  }, [isLoading]);
+  }, [isLoading, fetchedData]);
 
   const addToCartHandler = useAddToCart(room.id, room.name, room.price, 'room');
 
@@ -44,8 +46,13 @@ const RoomDetails = () => {
         isLoading={isLoading}
         label="Room is not available"
       >
-        <RoomImage image={image} />
-
+        <div>
+          <img
+            className={classes['room-photo']}
+            src={image.src}
+            alt={image.alt}
+          />
+        </div>
         <div className={classes['room-description']}>
           <h1>{room.name}</h1>
           <ItemDetails
