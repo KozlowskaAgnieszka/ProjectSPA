@@ -1,6 +1,7 @@
 import { useFetch } from '../../hooks/useFetch.js';
 import { fetchData } from '../../http.js';
 
+import Loader from '../../components/Layout/Loader/Loader.jsx';
 import RoomCard from '../../components/Layout/Roomcard/RoomCard.jsx';
 import Callendar from '../../components/UI/Callendar/Callendar.jsx';
 import Error from '../Error/Error.jsx';
@@ -10,6 +11,7 @@ import classes from './Rooms.module.css';
 const Rooms = () => {
   const {
     isLoading,
+    isEmpty,
     fetchedData: rooms,
     error,
   } = useFetch(fetchData, 'rooms', []);
@@ -26,13 +28,11 @@ const Rooms = () => {
       <div className={classes.stay}>
         Your stay: <Callendar callStyle="light" btnStyle="btn-light" />
       </div>
-      {isLoading && (
-        <p className={classes['fallback-text']}>Rooms list is loading...</p>
-      )}
-      {!isLoading && rooms.length === 0 && (
-        <p className={classes['fallback-text']}>No rooms available...</p>
-      )}
-      {!isLoading && rooms.length > 0 && (
+      <Loader
+        isEmpty={isEmpty}
+        isLoading={isLoading}
+        label="No rooms available"
+      >
         <ul className={classes['rooms-list']}>
           {rooms.map((room) => {
             return (
@@ -47,7 +47,7 @@ const Rooms = () => {
             );
           })}
         </ul>
-      )}
+      </Loader>
     </>
   );
 };

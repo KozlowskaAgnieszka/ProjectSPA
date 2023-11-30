@@ -1,13 +1,6 @@
-export const filteredTreatments = (area, treatments) => {
-  return treatments.filter((treatment) => treatment.area === area);
-};
+import _ from 'lodash';
 
 export const getUniqueAreas = (treatments) => {
-  const treatmentsArea = treatments.map((treatment) => treatment.area);
-  const removedDuplicates = treatmentsArea.reduce((acc, curr) => {
-    !acc.includes(curr) && acc.push(curr);
-    return acc;
-  }, []);
-
-  return removedDuplicates;
+  const treatmentsAreas = treatments.map((treatment) => treatment.area);
+  return _.uniq(treatmentsAreas);
 };

@@ -1,7 +1,9 @@
+
 import { useFetch } from '../../hooks/useFetch.js';
 import { fetchData } from '../../http.js';
 import { getUniqueAreas } from '../../helpers/treatments.js';
 
+import Loader from '../../components/Layout/Loader/Loader.jsx';
 import Error from '../Error/Error.jsx';
 
 import classes from './Treatments.module.css';
@@ -10,6 +12,7 @@ import TreatmentAreaItems from './TreatmentsAreaItems.jsx';
 const Treatments = () => {
   const {
     isLoading,
+    isEmpty,
     fetchedData: treatments,
     error,
   } = useFetch(fetchData, 'treatments', []);
@@ -27,15 +30,11 @@ const Treatments = () => {
   return (
     <>
       <h1>Treatments</h1>
-      {isLoading && (
-        <p className={classes['fallback-text']}>
-          Treatments list is loading...
-        </p>
-      )}
-      {!isLoading && treatments.length === 0 && (
-        <p className={classes['fallback-text']}>No treatment available...</p>
-      )}
-      {!isLoading && treatments.length > 0 && (
+      <Loader
+        isEmpty={isEmpty}
+        isLoading={isLoading}
+        label="No treatments available"
+      >
         <>
           {treatmentsArea.map((area) => {
             return (
@@ -52,7 +51,7 @@ const Treatments = () => {
             );
           })}
         </>
-      )}
+      </Loader>
     </>
   );
 };

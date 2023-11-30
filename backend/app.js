@@ -29,9 +29,9 @@ app.get('/rooms/:roomId', async (req, res) => {
   const fileContent = await fs.readFile('./data/rooms.json');
 
   const roomsData = JSON.parse(fileContent);
-  const room = roomsData[roomId];
+  const rooms = roomsData[roomId];
 
-  res.status(200).json({ room });
+  res.status(200).json({ rooms });
 });
 
 app.get('/treatments', async (req, res) => {
