@@ -3,10 +3,11 @@ Work in progres...
 Single Page Application with React
 
 ### Project specifications:
-- The application should allow you to select arrival and departure dates and book a room
-- Browse available treatments and add selected treatments to your cart
-- Summary of the order placed
-- User registration and login // ToDo's
+- - The application should allow to select check-in and check-out dates and book a room
+- Adding treatments to cart
+- Order summary
+- Creating user account & authentication / To Do...
+-
 
 ### Technologies and libraries:
 - React
